@@ -3,12 +3,12 @@ require 'rspec/core/formatters/progress_formatter'
 class RageFormatter < RSpec::Core::Formatters::ProgressFormatter
   
   def initialize(output)
-    @@fails = []
+    @fails = []
     super
   end
 
   def example_failed(example)
-    @@fails << 'U'
+    @fails << 'U'
     super
   end
 
@@ -29,7 +29,7 @@ class RageFormatter < RSpec::Core::Formatters::ProgressFormatter
   private
 
   def rage
-    print @@fails.join ''
-    @@fails = []
+    print @fails.join ''
+    @fails = []
   end
 end
