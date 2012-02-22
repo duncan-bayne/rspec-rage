@@ -1,0 +1,40 @@
+$ rspec -r ./rage_formatter.rb dummy_spec.rb --format RageFormatter
+.FFFUUU..
+
+Failures:
+
+  1) Dummy fails
+     Failure/Error: 1.should eql(2)
+       
+       expected: 2
+            got: 1
+       
+       (compared using eql?)
+     # ./dummy_spec.rb:7:in `block (2 levels) in <top (required)>'
+
+  2) Dummy fails
+     Failure/Error: 1.should eql(2)
+       
+       expected: 2
+            got: 1
+       
+       (compared using eql?)
+     # ./dummy_spec.rb:11:in `block (2 levels) in <top (required)>'
+
+  3) Dummy fails
+     Failure/Error: 1.should eql(2)
+       
+       expected: 2
+            got: 1
+       
+       (compared using eql?)
+     # ./dummy_spec.rb:15:in `block (2 levels) in <top (required)>'
+
+Finished in 0.00071 seconds
+6 examples, 3 failures
+
+Failed examples:
+
+rspec ./dummy_spec.rb:6 # Dummy fails
+rspec ./dummy_spec.rb:10 # Dummy fails
+rspec ./dummy_spec.rb:14 # Dummy fails
